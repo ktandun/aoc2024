@@ -46,9 +46,6 @@ fn part_two(input: List(String)) {
   lines
   |> list.map(fn(line) {
     let #(left, _) = line
-    left
-  })
-  |> list.map(fn(left) {
     case dict.get(right_frequencies, left) {
       Ok(value) -> left * value
       _ -> 0
